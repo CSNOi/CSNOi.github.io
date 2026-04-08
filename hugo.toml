@@ -21,10 +21,10 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.zh-cn.params.navbar]
-        align = "right"
+        align = "ms-auto"  # 🟢 修复：在 Bootstrap 5 中，ms-auto 才能将标签栏推至右侧对齐
         showLogo = true
         logoText = "陈坤葳"
-        disableSearch = true  # 彻底关闭搜索框，解决白条及靠左问题
+        disableSearch = true  # 彻底关闭搜索框，释放中间空间
         
       [languages.zh-cn.params.hero]
         enable = true
@@ -42,7 +42,7 @@ enableRobotsTXT = true
               url = "mailto:WorkKunweiChen@outlook.com"
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-instagram"
-              url = "https://instagram.com/你的用户名" # 请替换为你的实际主页
+              url = "https://instagram.com/你的用户名"
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-qq"
               url = "tencent://AddContact/?fromId=45&fromService=1&wpa_confirm_indicator=1&uin=1226120778"
@@ -151,7 +151,7 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.en.params.navbar]
-        align = "right"
+        align = "ms-auto"  # 🟢 修复：英文版同步修改为 ms-auto 以实现右对齐
         showLogo = true
         logoText = "Kunwei Chen"
         disableSearch = true
