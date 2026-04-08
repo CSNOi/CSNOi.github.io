@@ -7,29 +7,27 @@ theme = "hugo-profile"
 enableRobotsTXT = true
 
 # ==========================================
-# 全站通用参数配置 (彻底解决搜索框、导航对齐与底部图标)
+# 全站通用参数配置 (彻底解决对齐、搜索框与图标问题)
 # ==========================================
 [params]
   title = "陈坤葳 | AI & Robotics"
   description = "AI算法工程师，专注于机器视觉、多传感器融合与AI可解释性理论"
   favicon = "/fav.png"
-  
-  # 🟢 导航栏全局配置
-  [params.navbar]
-    align = "ms-auto"      # 强制右对齐
-    showLogo = true
-    disableSearch = true   # 全局禁用搜索框
+  disableSearch = true      # 全局禁用搜索
 
-  # 🟢 底部全站通用配置
+  [params.navbar]
+    align = "ms-auto"      # 关键：强制标签栏向右侧靠拢
+    showLogo = true
+    disableSearch = true   # 导航栏禁用搜索
+
   [params.footer]
     trademark = true       # 显示六边形Logo
     copyright = "© 2026 All rights reserved"
     enable = true
-    # 底部彩色图标矩阵
+    # 底部彩色图标矩阵配置
     [params.footer.socialNetworks]
       github = "https://github.com/CSNOi"
-      instagram = "https://instagram.com/你的用户名"
-      # linkedin = "https://linkedin.com/in/你的主页"
+      instagram = "https://www.instagram.com/topocat001"
 
 [languages]
   # ----------------------------------------
@@ -56,7 +54,14 @@ enableRobotsTXT = true
         content = "北京化工大学人工智能背景，法学双学位复合背景。目前担任算法工程师，致力于让黑盒模型变得透明，让机器人感知更加精准。"
         image = "/img/profile.jpg" 
         
-        # 首页社交图标
+        # 🟢 新增：中文版简历按钮
+        [languages.zh-cn.params.hero.button]
+          enable = true
+          name = "查看简历"
+          url = "/resume.pdf"  # 请将简历重命名为 resume.pdf 放入 static 文件夹
+          download = false     # 设置为 true 则点击时直接下载
+
+        # 首页图标配置
         [languages.zh-cn.params.hero.socialLinks]
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-github"
@@ -66,7 +71,7 @@ enableRobotsTXT = true
               url = "mailto:WorkKunweiChen@outlook.com"
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-instagram"
-              url = "https://instagram.com/你的用户名"
+              url = "https://www.instagram.com/topocat001"
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-qq"
               url = "tencent://AddContact/?fromId=45&fromService=1&wpa_confirm_indicator=1&uin=1226120778"
@@ -98,7 +103,6 @@ enableRobotsTXT = true
         title = "工作与实习"
         [[languages.zh-cn.params.experience.items]]
             company = "Lingxin Tech" 
-            # 🟢 修复：使用官方要求的 jobs 数组结构，防止内容空白
             [[languages.zh-cn.params.experience.items.jobs]]
                 name = "算法工程师"
                 date = "2026.01 - 至今"
@@ -148,7 +152,7 @@ enableRobotsTXT = true
         btnName = "发送邮件"
 
   # ----------------------------------------
-  # 2. 英文版配置 (en) - 严格同步
+  # 2. 英文版配置 (en)
   # ----------------------------------------
   [languages.en]
     title = "Kunwei Chen | AI & Robotics"
@@ -167,9 +171,16 @@ enableRobotsTXT = true
       [languages.en.params.hero]
         enable = true
         title = "Hi, I'm Kunwei Chen"
-        subtitle = "Focusing on Mechanistic Interpretability & VSLAM"
-        content = "Algorithm Engineer specializing in AI interpretability and robot perception."
+        subtitle = "Focusing on Mechanistic Interpretability & High-Precision VSLAM"
+        content = "With a dual degree in AI and Law from BUCT, I currently work as an Algorithm Engineer at Lingxin Qiaoshou. I am passionate about opening the AI black box and making robot perception more precise."
         image = "/img/profile.jpg" 
+
+        # 🟢 新增：英文版 Resume 按钮
+        [languages.en.params.hero.button]
+          enable = true
+          name = "Resume"
+          url = "/resume.pdf"
+          download = false
 
         [languages.en.params.hero.socialLinks]
           [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
@@ -180,7 +191,7 @@ enableRobotsTXT = true
               url = "mailto:WorkKunweiChen@outlook.com"
           [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-instagram"
-              url = "https://instagram.com/yourusername"
+              url = "https://www.instagram.com/topocat001"
           [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-qq"
               url = "tencent://AddContact/?fromId=45&fromService=1&wpa_confirm_indicator=1&uin=1226120778"
@@ -189,30 +200,33 @@ enableRobotsTXT = true
         enable = true
         title = "About Me"
         image = "/img/profile.jpg"
-        content = "Passionate about opening the AI black box and making robot perception more precise."
+        content = "I have a deep interest in the underlying mechanisms of neural networks. My research involves feature visualization and mechanistic interpretability. On the engineering side, I have full-stack experience from low-level driver development (STM32/CUDA C) to high-level perception (VSLAM/SAM3)."
 
       [languages.en.params.skills]
         enable = true
         title = "Tech Stack"
         [[languages.en.params.skills.items]]
             icon = "cpu"
-            title = "Low-Level"
-            info = "CUDA C, Assembly, STM32"
+            title = "Low-Level Dev"
+            info = "CUDA C, Assembly Optimization, STM32"
         [[languages.en.params.skills.items]]
             icon = "eye"
-            title = "CV"
+            title = "Computer Vision"
             info = "VSLAM, OpenCV, SAM3"
+        [[languages.en.params.skills.items]]
+            icon = "code"
+            title = "AI Theory"
+            info = "Mechanistic Interpretability (XAI), TransformerLens"
 
       [languages.en.params.experience]
         enable = true
         title = "Experience"
         [[languages.en.params.experience.items]]
             company = "Lingxin Tech" 
-            # 🟢 修复：英文版同步使用 jobs 嵌套结构
             [[languages.en.params.experience.items.jobs]]
                 name = "Algorithm Engineer"
                 date = "Jan 2026 - Present"
-                content = "Focusing on robot vision and multi-sensor fusion VSLAM deployment."
+                content = "Responsible for robot vision, high-precision multi-sensor fusion VSLAM, and model deployment."
 
       [languages.en.params.education]
         enable = true
@@ -221,24 +235,24 @@ enableRobotsTXT = true
             title = "B.Eng. in Artificial Intelligence"
             school = { name = "BUCT", url = "https://www.buct.edu.cn/" }
             date = "Sept 2020 - June 2024"
-            content = "GPA: 3.12. Major: Machine Learning, Deep Learning, CV."
+            content = "GPA: 3.12. Core: Machine Learning (90), Deep Learning (91), Computer Vision (91)."
         [[languages.en.params.education.items]]
             title = "Bachelor of Laws (Dual Degree)"
             school = { name = "BUCT", url = "https://www.buct.edu.cn/" }
             date = "Sept 2024 - Present"
-            content = "AI compliance and trustworthy computing."
+            content = "Focusing on AI compliance, safety, and trustworthy computing."
 
       [languages.en.params.projects]
         enable = true
         title = "Projects"
         [[languages.en.params.projects.items]]
           title = "Bearing Fault Diagnosis (XAI)"
-          content = "ViT-based classification and deep feature visualization."
+          content = "ViT-based classification and deep feature visualization to interpret the correlation between faults and features."
           badges = ["PyTorch", "ViT", "XAI"]
           image = "/img/project-1.jpg"
         [[languages.en.params.projects.items]]
           title = "Dual-Channel Spectrum Analyzer"
-          content = "National key instrument project: real-time data modeling."
+          content = "Developed hardware-to-software pipelines and real-time data processing models."
           badges = ["C/C++", "DSP"]
           image = "/img/project-2.jpg"
 
@@ -253,7 +267,7 @@ enableRobotsTXT = true
       [languages.en.params.contact]
         enable = true
         title = "Contact"
-        content = "My inbox is always open. Feel free to reach out!"
+        content = "My inbox is always open. Feel free to reach out for research collaboration or technical exchange!"
         email = "WorkKunweiChen@outlook.com"
         btnName = "Mail me"
 
