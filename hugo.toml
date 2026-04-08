@@ -1,77 +1,85 @@
+# --- 全局基础配置 ---
 baseURL = "https://csnoi.github.io/"
-languageCode = "zh-cn"
-title = "陈坤葳 (Kunwei Chen) | AI & Robotics"
+defaultContentLanguage = "zh-cn" # 设置默认打开的语言为中文
 theme = "hugo-profile"
 
-[params]
-    # 基础信息
+# ==========================================
+# 多语言配置区域
+# ==========================================
+[languages]
+
+  # ----------------------------------------
+  # 1. 中文版配置 (zh-cn)
+  # ----------------------------------------
+  [languages.zh-cn]
     title = "陈坤葳"
-    description = "AI算法工程师，专注于机器视觉、多传感器融合与AI可解释性理论"
-    image = "img/profile.jpg" # 确保图片在 static/img/profile.jpg
-    
-    # 导航栏配置
-    [params.navbar]
+    languageName = "中/CN" # 语言切换器上显示的文字
+    weight = 1
+
+    [languages.zh-cn.params]
+      title = "陈坤葳"
+      description = "AI算法工程师，专注于机器视觉、多传感器融合与AI可解释性理论"
+      image = "img/profile.jpg"
+      
+      [languages.zh-cn.params.navbar]
         align = "right"
         showLogo = true
         logoText = "Kunwei Chen"
         
-    # 首页大图部分
-    [params.hero]
+      [languages.zh-cn.params.hero]
         enable = true
         title = "你好，我是 陈坤葳"
         subtitle = "深耕 AI 可解释性理论与高精度 VSLAM 定位"
         content = "北京化工大学人工智能背景，法学双学位复合背景。目前在灵心巧手(北京)科技有限公司担任算法工程师，致力于让黑盒模型变得透明，让机器人感知更加精准。"
-        image = "img/hero.svg" # 可以使用主题自带的，或者放一张你的硬核项目图
+        image = "img/profile.jpg" 
         
-    # 关于我部分
-    [params.about]
-        enable = true
-        title = "关于我"
-        image = "img/profile.jpg"
-        content = "我对神经网络的底层机制有着浓厚的兴趣，研究方向涵盖特征可视化与特征反向工程。在工程实践上，具备从底层驱动开发（STM32/CUDA C）到上层感知算法（VSLAM/SAM3）的全栈落地能力。"
-
-    # 技能雷达图 (Hugo Profile 的特色)
-    [params.skills]
+      # (这里可以继续保留中文版的 about, skills, experience 等，前面加上 languages.zh-cn.params 前缀)
+      
+      [languages.zh-cn.params.skills]
         enable = true
         title = "技术栈"
-        [[params.skills.list]]
+        # ... 中文技能列表 ...
+
+  # ----------------------------------------
+  # 2. 英文版配置 (en)
+  # ----------------------------------------
+  [languages.en]
+    title = "Kunwei Chen | AI & Robotics"
+    languageName = "En/US" # 语言切换器上显示的文字
+    weight = 2
+
+    [languages.en.params]
+      title = "Kunwei Chen"
+      description = "AI Algorithm Engineer focusing on Computer Vision, Sensor Fusion, and XAI."
+      image = "img/profile.jpg"
+      
+      [languages.en.params.navbar]
+        align = "right"
+        showLogo = true
+        logoText = "Kunwei Chen"
+        
+      [languages.en.params.hero]
+        enable = true
+        title = "Hi, I'm Kunwei Chen"
+        subtitle = "Focusing on Mechanistic Interpretability & High-Precision VSLAM"
+        content = "With a dual degree in AI and Law from BUCT, I currently work as an Algorithm Engineer at Lingxin Qiaoshou. I am passionate about opening the AI black box and making robot perception more precise."
+        image = "img/profile.jpg" 
+
+      # 英文版技能卡片
+      [languages.en.params.skills]
+        enable = true
+        title = "Tech Stack"
+        [[languages.en.params.skills.list]]
             icon = "cpu"
-            title = "底层开发"
-            info = "CUDA C, 汇编优化, STM32"
-        [[params.skills.list]]
+            title = "Low-Level Dev"
+            info = "CUDA C, Assembly Optimization, STM32"
+        [[languages.en.params.skills.list]]
             icon = "eye"
-            title = "机器视觉"
+            title = "Computer Vision"
             info = "VSLAM, OpenCV, SAM3"
-        [[params.skills.list]]
-            icon = "code"
-            title = "AI 框架"
-            info = "PyTorch, XAI, TransformerLens"
 
-    # 工作经历
-    [params.experience]
-        enable = true
-        title = "工作与实习"
-        [[params.experience.list]]
-            company = "灵心巧手(北京)科技有限公司"
-            position = "算法工程师"
-            date = "2026.01 - 至今"
-            content = "负责高精度多传感器融合视觉定位、模型部署与数据采集工作。"
-
-    # 教育背景
-    [params.education]
-        enable = true
-        title = "教育经历"
-        [[params.education.list]]
-            degree = "人工智能 (本科)"
-            school = "北京化工大学"
-            date = "2020.09 - 2024.06"
-            content = "GPA: 3.12。主修机器学习(90)、神经网络(91)、机器视觉(91)。"
-        [[params.education.list]]
-            degree = "法学 (第二学位)"
-            school = "北京化工大学"
-            date = "2024.09 - 至今"
-            content = "探索 AI 合规、安全与可信计算的跨学科领域。"
-
+# --- 社交链接 (全站通用，放在最外层) ---
 [social]
     github = "https://github.com/CSNOi"
     email = "WorkKunweiChen@outlook.com"
+    instagram = "topocat001"
