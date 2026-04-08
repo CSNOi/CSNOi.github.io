@@ -6,11 +6,7 @@ defaultContentLanguage = "zh-cn"
 theme = "hugo-profile"
 enableRobotsTXT = true
 
-# ==========================================
-# 多语言配置区域
-# ==========================================
 [languages]
-
   # ----------------------------------------
   # 1. 中文版配置 (zh-cn)
   # ----------------------------------------
@@ -25,7 +21,7 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.zh-cn.params.navbar]
-        align = "left"    # 修复：标签栏左对齐
+        align = "left"
         showLogo = true
         logoText = "陈坤葳"
         
@@ -36,6 +32,15 @@ enableRobotsTXT = true
         content = "北京化工大学人工智能背景，法学双学位复合背景。目前担任算法工程师，致力于让黑盒模型变得透明，让机器人感知更加精准。"
         image = "/img/profile.jpg" 
         
+        # 🟢 修复：添加 GitHub 和邮箱图标到首页
+        [languages.zh-cn.params.hero.socialLinks]
+          [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fab fa-github"
+              url = "https://github.com/CSNOi"
+          [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fas fa-envelope"
+              url = "mailto:WorkKunweiChen@outlook.com"
+              
       [languages.zh-cn.params.about]
         enable = true
         title = "关于我"
@@ -45,7 +50,6 @@ enableRobotsTXT = true
       [languages.zh-cn.params.skills]
         enable = true
         title = "技术栈"
-        # 修复：使用 items 而不是 list
         [[languages.zh-cn.params.skills.items]]
             icon = "cpu"
             title = "底层开发"
@@ -63,10 +67,9 @@ enableRobotsTXT = true
         enable = true
         title = "工作与实习"
         [[languages.zh-cn.params.experience.items]]
-            # 修复：去除括号等特殊字符，防止网页脚本解析 ID 时崩溃
-            company = "灵心巧手科技有限公司" 
-            # 修复：必须使用 job 字段而不是 position
-            job = "算法工程师"
+            # 🟢 修复：必须使用英文名防止 ID 解析崩溃，中文名转移到 job 中
+            company = "Lingxin Tech" 
+            job = "算法工程师 @ 灵心巧手(北京)科技"
             date = "2026.01 - 至今"
             content = "负责机器人视觉相关工作、高精度多传感器融合视觉定位及模型部署。"
 
@@ -74,16 +77,24 @@ enableRobotsTXT = true
         enable = true
         title = "教育经历"
         [[languages.zh-cn.params.education.items]]
-            degree = "人工智能 (本科)"
-            # 修复：将 school 转为带有 name 和 url 的内联对象，防止 URL 报错
+            # 🟢 修复：官方键名为 title
+            title = "人工智能 (本科)"
             school = { name = "北京化工大学", url = "https://www.buct.edu.cn/" }
             date = "2020.09 - 2024.06"
             content = "GPA: 3.12。主修：机器学习(90)、深度学习与神经网络(91)、图像理解与机器视觉(91)。"
         [[languages.zh-cn.params.education.items]]
-            degree = "法学 (第二学位)"
+            title = "法学 (第二学位)"
             school = { name = "北京化工大学", url = "https://www.buct.edu.cn/" }
             date = "2024.09 - 至今"
             content = "探索 AI 合规、安全与可信计算的跨学科领域。"
+
+      # 🟢 修复：在网页底部启用并添加联系方式模块
+      [languages.zh-cn.params.contact]
+        enable = true
+        title = "联系方式"
+        content = "我非常期待与志同道合的开发者、研究人员进行技术交流。如果您对我的算法部署感兴趣，或者有合作机会，欢迎随时邮件联系我。"
+        email = "WorkKunweiChen@outlook.com"
+        btnName = "发送邮件"
 
   # ----------------------------------------
   # 2. 英文版配置 (en)
@@ -99,7 +110,7 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.en.params.navbar]
-        align = "left"    # 修复：标签栏左对齐
+        align = "left"
         showLogo = true
         logoText = "Kunwei Chen"
         
@@ -109,6 +120,14 @@ enableRobotsTXT = true
         subtitle = "Focusing on Mechanistic Interpretability & High-Precision VSLAM"
         content = "With a dual degree in AI and Law from BUCT, I currently work as an Algorithm Engineer. I am passionate about opening the AI black box and making robot perception more precise."
         image = "/img/profile.jpg" 
+
+        [languages.en.params.hero.socialLinks]
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fab fa-github"
+              url = "https://github.com/CSNOi"
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fas fa-envelope"
+              url = "mailto:WorkKunweiChen@outlook.com"
 
       [languages.en.params.about]
         enable = true
@@ -136,8 +155,8 @@ enableRobotsTXT = true
         enable = true
         title = "Experience"
         [[languages.en.params.experience.items]]
-            company = "Lingxin Qiaoshou Tech Co., Ltd." 
-            job = "Algorithm Engineer"
+            company = "Lingxin Tech" 
+            job = "Algorithm Engineer @ Lingxin Qiaoshou"
             date = "Jan 2026 - Present"
             content = "Responsible for robot vision, high-precision multi-sensor fusion VSLAM, and model deployment."
 
@@ -145,26 +164,23 @@ enableRobotsTXT = true
         enable = true
         title = "Education"
         [[languages.en.params.education.items]]
-            degree = "B.Eng. in Artificial Intelligence"
+            title = "B.Eng. in Artificial Intelligence"
             school = { name = "Beijing University of Chemical Technology", url = "https://www.buct.edu.cn/" }
             date = "Sept 2020 - June 2024"
             content = "GPA: 3.12. Core: Machine Learning (90), Deep Learning (91), Computer Vision (91)."
         [[languages.en.params.education.items]]
-            degree = "Bachelor of Laws (Dual Degree)"
+            title = "Bachelor of Laws (Dual Degree)"
             school = { name = "Beijing University of Chemical Technology", url = "https://www.buct.edu.cn/" }
             date = "Sept 2024 - Present"
             content = "Focusing on AI compliance, safety, and trustworthy computing."
 
-# ==========================================
-# 社交链接 (全站通用)
-# ==========================================
-[social]
-    github = "https://github.com/CSNOi"
-    email = "WorkKunweiChen@outlook.com"
+      [languages.en.params.contact]
+        enable = true
+        title = "Contact"
+        content = "My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
+        email = "WorkKunweiChen@outlook.com"
+        btnName = "Mail me"
 
-# ==========================================
-# Markdown 渲染配置
-# ==========================================
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
