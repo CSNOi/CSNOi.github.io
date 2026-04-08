@@ -25,7 +25,7 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.zh-cn.params.navbar]
-        align = "right"
+        align = "left"
         showLogo = true
         logoText = "Kunwei Chen"
         
@@ -63,7 +63,8 @@ enableRobotsTXT = true
         title = "工作与实习"
         [[languages.zh-cn.params.experience.items]]
             company = "灵心巧手(北京)科技有限公司"
-            position = "算法工程师"
+            # 将 position 修改为 job
+            job = "算法工程师"  
             date = "2026.01 - 至今"
             content = "负责机器人视觉相关工作、高精度多传感器融合视觉定位及模型部署。"
 
@@ -97,7 +98,7 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.en.params.navbar]
-        align = "right"
+        align = "left"
         showLogo = true
         logoText = "Kunwei Chen"
         
@@ -135,10 +136,11 @@ enableRobotsTXT = true
         title = "Experience"
         [[languages.en.params.experience.items]]
             company = "Lingxin Qiaoshou (Beijing) Tech Co., Ltd."
-            position = "Algorithm Engineer"
+            # 将 position 修改为 job
+            job = "Algorithm Engineer"  
             date = "Jan 2026 - Present"
             content = "Responsible for robot vision, high-precision multi-sensor fusion VSLAM, and model deployment."
-
+            
       [languages.en.params.education]
         enable = true
         title = "Education"
