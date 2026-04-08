@@ -24,6 +24,7 @@ enableRobotsTXT = true
         align = "right"
         showLogo = true
         logoText = "陈坤葳"
+        disableSearch = true  # 彻底关闭搜索框，解决白条及靠左问题
         
       [languages.zh-cn.params.hero]
         enable = true
@@ -32,7 +33,6 @@ enableRobotsTXT = true
         content = "北京化工大学人工智能背景，法学双学位复合背景。目前担任算法工程师，致力于让黑盒模型变得透明，让机器人感知更加精准。"
         image = "/img/profile.jpg" 
         
-        # 🟢 修复：添加 GitHub 和邮箱图标到首页
         [languages.zh-cn.params.hero.socialLinks]
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-github"
@@ -40,6 +40,12 @@ enableRobotsTXT = true
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fas fa-envelope"
               url = "mailto:WorkKunweiChen@outlook.com"
+          [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fab fa-instagram"
+              url = "https://instagram.com/你的用户名" # 请替换为你的实际主页
+          [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fab fa-qq"
+              url = "tencent://AddContact/?fromId=45&fromService=1&wpa_confirm_indicator=1&uin=1226120778"
               
       [languages.zh-cn.params.about]
         enable = true
@@ -70,7 +76,6 @@ enableRobotsTXT = true
             company = "Lingxin Tech" 
             job = "算法工程师 @ 灵心巧手(北京)科技"
             date = "2026.01 - 至今"
-            # 🟢 修复：将 content 改为 information，并使用数组格式
             information = [
                 "负责机器人视觉相关工作、高精度多传感器融合视觉定位及模型部署。"
             ]
@@ -79,7 +84,6 @@ enableRobotsTXT = true
         enable = true
         title = "教育经历"
         [[languages.zh-cn.params.education.items]]
-            # 🟢 修复：官方键名为 title
             title = "人工智能 (本科)"
             school = { name = "北京化工大学", url = "https://www.buct.edu.cn/" }
             date = "2020.09 - 2024.06"
@@ -90,11 +94,46 @@ enableRobotsTXT = true
             date = "2024.09 - 至今"
             content = "探索 AI 合规、安全与可信计算的跨学科领域。"
 
-      # 🟢 修复：在网页底部启用并添加联系方式模块
+      [languages.zh-cn.params.projects]
+        enable = true
+        title = "项目经历"
+        [[languages.zh-cn.params.projects.items]]
+          title = "数据驱动的滚动轴承故障诊断 (XAI)"
+          content = "对轴承故障信号进行分析与特征选择，输入 ViT 网络分类。对提取的特征进行深度可视化分析，解释故障与特征的相关性。"
+          badges = ["PyTorch", "ViT", "特征可视化"]
+        [[languages.zh-cn.params.projects.items]]
+          title = "双通道光谱分析仪 (国家重点仪器)"
+          content = "完成从硬件接口到软件层的数据对接与架构设计，实现数据处理、模型建立与实时分析功能。"
+          badges = ["C/C++", "软硬协同", "数据处理"]
+        [[languages.zh-cn.params.projects.items]]
+          title = "AI 编曲与 Melody RNN 应用"
+          content = "运用 Google Magenta 框架训练与微调 Melody RNN，开发按照编曲需求自动生成 MIDI 音乐文件的 AI 编曲软件。"
+          badges = ["Python", "RNN", "模型部署"]
+        [[languages.zh-cn.params.projects.items]]
+          title = "基于 STM32 的视觉处理系统"
+          content = "全栈开发：涵盖裸机驱动接口、硬件模块选型、内存管理及算法汇编级优化。"
+          badges = ["STM32", "CUDA C", "汇编优化"]
+
+      [languages.zh-cn.params.achievements]
+        enable = true
+        title = "荣誉奖项"
+        [[languages.zh-cn.params.achievements.items]]
+          title = "美国大学生数学建模竞赛 (MCM/ICM) H奖"
+          content = "2021年"
+        [[languages.zh-cn.params.achievements.items]]
+          title = "蓝桥杯 C/C++ 与嵌入式设计开发 本科A组 省级三等奖"
+          content = "2021年第十二届 (C/C++)，2022年第十三届 (嵌入式)"
+        [[languages.zh-cn.params.achievements.items]]
+          title = "APMCM 亚太地区大学生数学建模竞赛 三等奖"
+          content = "2021年第十一届"
+        [[languages.zh-cn.params.achievements.items]]
+          title = "工信部工业互联网开发工程师认证"
+          content = "平台开发工程师初级 (一级) / 嵌入式开发工程师初级 (二级)"
+
       [languages.zh-cn.params.contact]
         enable = true
         title = "联系方式"
-        content = "我非常期待与志同道合的开发者、研究人员进行技术交流。如果您对我的算法部署感兴趣，或者有合作机会，欢迎随时邮件联系我。"
+        content = "欢迎随时邮件或通过社交媒体联系我。"
         email = "WorkKunweiChen@outlook.com"
         btnName = "发送邮件"
 
@@ -115,6 +154,7 @@ enableRobotsTXT = true
         align = "right"
         showLogo = true
         logoText = "Kunwei Chen"
+        disableSearch = true
         
       [languages.en.params.hero]
         enable = true
@@ -130,6 +170,12 @@ enableRobotsTXT = true
           [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fas fa-envelope"
               url = "mailto:WorkKunweiChen@outlook.com"
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fab fa-instagram"
+              url = "https://instagram.com/yourusername"
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+              icon = "fab fa-qq"
+              url = "tencent://AddContact/?fromId=45&fromService=1&wpa_confirm_indicator=1&uin=1226120778"
 
       [languages.en.params.about]
         enable = true
@@ -160,7 +206,6 @@ enableRobotsTXT = true
             company = "Lingxin Tech" 
             job = "Algorithm Engineer @ Lingxin Qiaoshou"
             date = "Jan 2026 - Present"
-            # 🟢 修复：同样改为 information 数组
             information = [
                 "Responsible for robot vision, high-precision multi-sensor fusion VSLAM, and model deployment."
             ]
@@ -179,12 +224,60 @@ enableRobotsTXT = true
             date = "Sept 2024 - Present"
             content = "Focusing on AI compliance, safety, and trustworthy computing."
 
+      [languages.en.params.projects]
+        enable = true
+        title = "Projects"
+        [[languages.en.params.projects.items]]
+          title = "Data-Driven Bearing Fault Diagnosis (XAI)"
+          content = "Analyzed fault signals and utilized a ViT network for classification. Conducted feature visualization to interpret the correlation between faults and selected features."
+          badges = ["PyTorch", "ViT", "Feature Visualization"]
+        [[languages.en.params.projects.items]]
+          title = "Dual-Channel Spectrum Analyzer"
+          content = "Developed hardware-to-software data pipelines, software architecture, and real-time data processing models for a national key instrument project."
+          badges = ["C/C++", "Hardware-Software Co-design"]
+        [[languages.en.params.projects.items]]
+          title = "AI Music Composition with Melody RNN"
+          content = "Trained and fine-tuned a Melody RNN using the Google Magenta framework to automatically generate MIDI files based on composition requirements."
+          badges = ["Python", "RNN", "Model Deployment"]
+        [[languages.en.params.projects.items]]
+          title = "STM32-based Vision Processing System"
+          content = "Full-stack development involving bare-metal drivers, hardware selection, memory management, and assembly-level algorithm optimization."
+          badges = ["STM32", "CUDA C", "Assembly Optimization"]
+
+      [languages.en.params.achievements]
+        enable = true
+        title = "Achievements & Awards"
+        [[languages.en.params.achievements.items]]
+          title = "Honorable Mention, Mathematical Contest in Modeling (MCM/ICM)"
+          content = "2021"
+        [[languages.en.params.achievements.items]]
+          title = "Provincial 3rd Prize, Lanqiao Cup Competition"
+          content = "C/C++ Programming (2021) & Embedded System Design (2022) - University Group A"
+        [[languages.en.params.achievements.items]]
+          title = "3rd Prize, APMCM Mathematical Contest in Modeling"
+          content = "2021"
+        [[languages.en.params.achievements.items]]
+          title = "MIIT Industrial Internet Developer Certification"
+          content = "Certified Junior Platform Developer & Embedded Developer"
+
       [languages.en.params.contact]
         enable = true
         title = "Contact"
         content = "My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
         email = "WorkKunweiChen@outlook.com"
         btnName = "Mail me"
+
+# ==========================================
+# 底部页脚与全站社交图标 (Footer & Social)
+# ==========================================
+[social]
+  github = "https://github.com/CSNOi"
+  # linkedin = "https://linkedin.com/in/你的主页" # 根据需要取消注释
+  # instagram = "https://instagram.com/你的主页" # 根据需要取消注释
+
+[params.footer]
+  trademark = true  
+  copyright = "© 2026 All rights reserved" 
 
 [markup]
   [markup.goldmark]
