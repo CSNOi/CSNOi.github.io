@@ -241,6 +241,16 @@ enableRobotsTXT = true
         email = "WorkKunweiChen@outlook.com"
         btnName = "Mail me"
 
+[[languages.zh-cn.menu.main]]
+    name = "博客"
+    url = "/blogs"
+    weight = 5
+
+[[languages.en.menu.main]]
+    name = "Blog"
+    url = "/en/blogs"
+    weight = 5
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
