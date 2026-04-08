@@ -21,7 +21,7 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.zh-cn.params.navbar]
-        align = "left"
+        align = "right"
         showLogo = true
         logoText = "陈坤葳"
         
@@ -67,11 +67,13 @@ enableRobotsTXT = true
         enable = true
         title = "工作与实习"
         [[languages.zh-cn.params.experience.items]]
-            # 🟢 修复：必须使用英文名防止 ID 解析崩溃，中文名转移到 job 中
             company = "Lingxin Tech" 
             job = "算法工程师 @ 灵心巧手(北京)科技"
             date = "2026.01 - 至今"
-            content = "负责机器人视觉相关工作、高精度多传感器融合视觉定位及模型部署。"
+            # 🟢 修复：将 content 改为 information，并使用数组格式
+            information = [
+                "负责机器人视觉相关工作、高精度多传感器融合视觉定位及模型部署。"
+            ]
 
       [languages.zh-cn.params.education]
         enable = true
@@ -110,7 +112,7 @@ enableRobotsTXT = true
       image = "/img/profile.jpg"
       
       [languages.en.params.navbar]
-        align = "left"
+        align = "right"
         showLogo = true
         logoText = "Kunwei Chen"
         
@@ -158,7 +160,10 @@ enableRobotsTXT = true
             company = "Lingxin Tech" 
             job = "Algorithm Engineer @ Lingxin Qiaoshou"
             date = "Jan 2026 - Present"
-            content = "Responsible for robot vision, high-precision multi-sensor fusion VSLAM, and model deployment."
+            # 🟢 修复：同样改为 information 数组
+            information = [
+                "Responsible for robot vision, high-precision multi-sensor fusion VSLAM, and model deployment."
+            ]
 
       [languages.en.params.education]
         enable = true
