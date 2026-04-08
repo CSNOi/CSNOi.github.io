@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSNOi 的个人主页</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f6f8fa;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .container {
+            margin-top: 2rem;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #0969da; }
+        .project-card {
+            border-left: 5px solid #0969da;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            background: #f0f7ff;
+            padding: 1rem;
+            border-radius: 0 5px 5px 0;
+        }
+        .tag {
+            display: inline-block;
+            background: #0969da;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>👋 你好，我是 CSNOi</h1>
+        <p>AI 开发者 | 机器人工程师 | 终身学习者</p>
+    </header>
+
+    <div class="container">
+        <h2>🚀 当前研究项目</h2>
+        
+        <div class="project-card">
+            <h3>🤖 VSLAM & 机器人定位</h3>
+            <p>使用 ROS 2 Jazzy 和 Orbbec 相机进行视觉里程计开发，集成 IMU 数据实现高精度定位。</p>
+            <span class="tag">C++</span> <span class="tag">ROS 2</span> <span class="tag">OpenCV</span>
+        </div>
+
+        <div class="project-card">
+            <h3>🧠 大模型微调 (SAM3)</h3>
+            <p>利用 LoRA 技术对 Segment Anything Model 3 进行训练，优化在特定领域（如动漫角色）的分割效果。</p>
+            <span class="tag">Python</span> <span class="tag">PyTorch</span> <span class="tag">LoRA</span>
+        </div>
+
+        <h2>📫 联系我</h2>
+        <p>如果你对我的项目感兴趣，欢迎通过 GitHub 与我交流！</p>
+        <a href="https://github.com/CSNOi" style="color: #0969da; text-decoration: none; font-weight: bold;">查看我的 GitHub 仓库 →</a>
+    </div>
+
+    <footer style="text-align: center; margin-top: 2rem; color: #666; font-size: 0.8rem;">
+        <p>© 2026 CSNOi. 由 GitHub Pages 强力驱动.</p>
+    </footer>
+
+</body>
+</html>
