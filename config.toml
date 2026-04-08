@@ -2,7 +2,7 @@ baseURL = "https://csnoi.github.io/"
 languageCode = "en-gb"
 title = "Hugo Theme - Prav"
 theme = "prav"  # 必须指向 themes 目录下的文件夹名
-
+ignoreErrors = ["error-missing-instagram-accesstoken"]
 
 pygmentsCodeFences = "true"
 pygmentsStyle = "perldoc"
