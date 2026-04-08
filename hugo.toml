@@ -45,15 +45,15 @@ enableRobotsTXT = true
       [languages.zh-cn.params.skills]
         enable = true
         title = "技术栈"
-        [[languages.zh-cn.params.skills.list]]
+        [[languages.zh-cn.params.skills.items]]
             icon = "cpu"
             title = "底层开发"
             info = "CUDA C, 汇编优化, STM32"
-        [[languages.zh-cn.params.skills.list]]
+        [[languages.zh-cn.params.skills.items]]
             icon = "eye"
             title = "机器视觉"
             info = "VSLAM, OpenCV, SAM3"
-        [[languages.zh-cn.params.skills.list]]
+        [[languages.zh-cn.params.skills.items]]
             icon = "code"
             title = "AI 理论"
             info = "可解释性理论 (XAI), TransformerLens"
@@ -61,7 +61,7 @@ enableRobotsTXT = true
       [languages.zh-cn.params.experience]
         enable = true
         title = "工作与实习"
-        [[languages.zh-cn.params.experience.list]]
+        [[languages.zh-cn.params.experience.items]]
             company = "灵心巧手(北京)科技有限公司"
             position = "算法工程师"
             date = "2026.01 - 至今"
@@ -70,12 +70,12 @@ enableRobotsTXT = true
       [languages.zh-cn.params.education]
         enable = true
         title = "教育经历"
-        [[languages.zh-cn.params.education.list]]
+        [[languages.zh-cn.params.education.items]]
             degree = "人工智能 (本科)"
             school = "北京化工大学 (211/双一流)"
             date = "2020.09 - 2024.06"
             content = "GPA: 3.12。主修：机器学习(90)、深度学习与神经网络(91)、图像理解与机器视觉(91)。"
-        [[languages.zh-cn.params.education.list]]
+        [[languages.zh-cn.params.education.items]]
             degree = "法学 (第二学位)"
             school = "北京化工大学"
             date = "2024.09 - 至今"
@@ -115,15 +115,15 @@ enableRobotsTXT = true
       [languages.en.params.skills]
         enable = true
         title = "Tech Stack"
-        [[languages.en.params.skills.list]]
+        [[languages.en.params.skills.items]]
             icon = "cpu"
             title = "Low-Level Dev"
             info = "CUDA C, Assembly Optimization, STM32"
-        [[languages.en.params.skills.list]]
+        [[languages.en.params.skills.items]]
             icon = "eye"
             title = "Computer Vision"
             info = "VSLAM, OpenCV, SAM3"
-        [[languages.en.params.skills.list]]
+        [[languages.en.params.skills.items]]
             icon = "code"
             title = "AI Theory"
             info = "Mechanistic Interpretability (XAI), Transformer Circuits"
@@ -131,7 +131,7 @@ enableRobotsTXT = true
       [languages.en.params.experience]
         enable = true
         title = "Experience"
-        [[languages.en.params.experience.list]]
+        [[languages.en.params.experience.items]]
             company = "Lingxin Qiaoshou (Beijing) Tech Co., Ltd."
             position = "Algorithm Engineer"
             date = "Jan 2026 - Present"
@@ -140,12 +140,12 @@ enableRobotsTXT = true
       [languages.en.params.education]
         enable = true
         title = "Education"
-        [[languages.en.params.education.list]]
+        [[languages.en.params.education.items]]
             degree = "B.Eng. in Artificial Intelligence"
             school = "Beijing University of Chemical Technology"
             date = "Sept 2020 - June 2024"
             content = "GPA: 3.12. Core: Machine Learning (90), Deep Learning (91), Computer Vision (91)."
-        [[languages.en.params.education.list]]
+        [[languages.en.params.education.items]]
             degree = "Bachelor of Laws (Dual Degree)"
             school = "Beijing University of Chemical Technology"
             date = "Sept 2024 - Present"
