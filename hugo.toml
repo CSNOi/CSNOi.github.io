@@ -13,18 +13,17 @@ enableRobotsTXT = true
   title = "陈坤葳 | AI & Robotics"
   description = "AI算法工程师，专注于机器视觉、多传感器融合与AI可解释性理论"
   favicon = "/fav.png"
-  disableSearch = true      # 全局禁用搜索
+  disableSearch = true
 
   [params.navbar]
-    align = "ms-auto"      # 关键：强制标签栏向右侧靠拢
+    align = "ms-auto"      # 强制标签栏向右侧靠拢
     showLogo = true
-    disableSearch = true   # 导航栏禁用搜索
+    disableSearch = true
 
   [params.footer]
-    trademark = true       # 显示六边形Logo
+    trademark = true       
     copyright = "© 2026 All rights reserved"
     enable = true
-    # 底部彩色图标矩阵配置
     [params.footer.socialNetworks]
       github = "https://github.com/CSNOi"
       instagram = "https://www.instagram.com/topocat001"
@@ -54,14 +53,12 @@ enableRobotsTXT = true
         content = "北京化工大学人工智能背景，法学双学位复合背景。目前担任算法工程师，致力于让黑盒模型变得透明，让机器人感知更加精准。"
         image = "/img/profile.jpg" 
         
-        # 🟢 新增：中文版简历按钮
         [languages.zh-cn.params.hero.button]
           enable = true
           name = "查看简历"
-          url = "/resume.pdf"  # 请将简历重命名为 resume.pdf 放入 static 文件夹
-          download = false     # 设置为 true 则点击时直接下载
+          url = "/resume.pdf"
+          download = false
 
-        # 首页图标配置
         [languages.zh-cn.params.hero.socialLinks]
           [[languages.zh-cn.params.hero.socialLinks.fontAwesomeIcons]]
               icon = "fab fa-github"
@@ -82,21 +79,22 @@ enableRobotsTXT = true
         image = "/img/profile.jpg"
         content = "我对神经网络的底层机制有着浓厚的兴趣，研究方向涵盖特征可视化与特征反向工程。在工程实践上，具备从底层驱动开发（STM32/CUDA C）到上层感知算法（VSLAM/SAM3）的全栈落地能力。"
 
-      [languages.zh-cn.params.skills]
-        enable = true
-        title = "技术栈"
-        [[languages.zh-cn.params.skills.items]]
-            icon = "cpu"
-            title = "底层开发"
-            info = "CUDA C, 汇编优化, STM32"
-        [[languages.zh-cn.params.skills.items]]
-            icon = "eye"
-            title = "机器视觉"
-            info = "VSLAM, OpenCV, SAM3"
-        [[languages.zh-cn.params.skills.items]]
-            icon = "code"
-            title = "AI 理论"
-            info = "可解释性理论 (XAI), TransformerLens"
+        # 🟢 修复：将技术栈嵌套在 about 模块内
+        [languages.zh-cn.params.about.skills]
+          enable = true
+          title = "技术栈"
+          [[languages.zh-cn.params.about.skills.items]]
+              icon = "cpu"
+              title = "底层开发"
+              info = "CUDA C, 汇编优化, STM32"
+          [[languages.zh-cn.params.about.skills.items]]
+              icon = "eye"
+              title = "机器视觉"
+              info = "VSLAM, OpenCV, SAM3"
+          [[languages.zh-cn.params.about.skills.items]]
+              icon = "code"
+              title = "AI 理论"
+              info = "可解释性理论 (XAI), TransformerLens"
 
       [languages.zh-cn.params.experience]
         enable = true
@@ -175,7 +173,6 @@ enableRobotsTXT = true
         content = "With a dual degree in AI and Law from BUCT, I currently work as an Algorithm Engineer at Lingxin Qiaoshou. I am passionate about opening the AI black box and making robot perception more precise."
         image = "/img/profile.jpg" 
 
-        # 🟢 新增：英文版 Resume 按钮
         [languages.en.params.hero.button]
           enable = true
           name = "Resume"
@@ -202,21 +199,22 @@ enableRobotsTXT = true
         image = "/img/profile.jpg"
         content = "I have a deep interest in the underlying mechanisms of neural networks. My research involves feature visualization and mechanistic interpretability. On the engineering side, I have full-stack experience from low-level driver development (STM32/CUDA C) to high-level perception (VSLAM/SAM3)."
 
-      [languages.en.params.skills]
-        enable = true
-        title = "Tech Stack"
-        [[languages.en.params.skills.items]]
-            icon = "cpu"
-            title = "Low-Level Dev"
-            info = "CUDA C, Assembly Optimization, STM32"
-        [[languages.en.params.skills.items]]
-            icon = "eye"
-            title = "Computer Vision"
-            info = "VSLAM, OpenCV, SAM3"
-        [[languages.en.params.skills.items]]
-            icon = "code"
-            title = "AI Theory"
-            info = "Mechanistic Interpretability (XAI), TransformerLens"
+        # 🟢 修复：英文版同步嵌套技术栈
+        [languages.en.params.about.skills]
+          enable = true
+          title = "Tech Stack"
+          [[languages.en.params.about.skills.items]]
+              icon = "cpu"
+              title = "Low-Level"
+              info = "CUDA C, Assembly, STM32"
+          [[languages.en.params.about.skills.items]]
+              icon = "eye"
+              title = "Computer Vision"
+              info = "VSLAM, OpenCV, SAM3"
+          [[languages.en.params.about.skills.items]]
+              icon = "code"
+              title = "AI Theory"
+              info = "XAI, TransformerLens"
 
       [languages.en.params.experience]
         enable = true
@@ -235,7 +233,7 @@ enableRobotsTXT = true
             title = "B.Eng. in Artificial Intelligence"
             school = { name = "BUCT", url = "https://www.buct.edu.cn/" }
             date = "Sept 2020 - June 2024"
-            content = "GPA: 3.12. Core: Machine Learning (90), Deep Learning (91), Computer Vision (91)."
+            content = "GPA: 3.12. Core: Machine Learning, Deep Learning, Computer Vision."
         [[languages.en.params.education.items]]
             title = "Bachelor of Laws (Dual Degree)"
             school = { name = "BUCT", url = "https://www.buct.edu.cn/" }
@@ -247,12 +245,12 @@ enableRobotsTXT = true
         title = "Projects"
         [[languages.en.params.projects.items]]
           title = "Bearing Fault Diagnosis (XAI)"
-          content = "ViT-based classification and deep feature visualization to interpret the correlation between faults and features."
+          content = "ViT-based classification and deep feature visualization."
           badges = ["PyTorch", "ViT", "XAI"]
           image = "/img/project-1.jpg"
         [[languages.en.params.projects.items]]
           title = "Dual-Channel Spectrum Analyzer"
-          content = "Developed hardware-to-software pipelines and real-time data processing models."
+          content = "Developed hardware-to-software pipelines and real-time processing models."
           badges = ["C/C++", "DSP"]
           image = "/img/project-2.jpg"
 
@@ -267,7 +265,7 @@ enableRobotsTXT = true
       [languages.en.params.contact]
         enable = true
         title = "Contact"
-        content = "My inbox is always open. Feel free to reach out for research collaboration or technical exchange!"
+        content = "My inbox is always open. Feel free to reach out!"
         email = "WorkKunweiChen@outlook.com"
         btnName = "Mail me"
 
