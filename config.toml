@@ -1,24 +1,24 @@
 baseURL = "https://csnoi.github.io/"
 languageCode = "zh-cn"            # 建议改为中文，对国内访问者更友好
-title = "陈坤葳 (Kunwei Chen) | AI & Robotics"
+title = "陈坤葳 (Kunwei Chen)"
 theme = "prav"
 ignoreErrors = ["error-missing-instagram-accesstoken"]
 
 # 语法高亮优化：建议改用 monokai 或 solarized-dark，更符合程序员审美
 pygmentsCodeFences = true
-pygmentsStyle = "monokai"
+pygmentsStyle = "solarized-dark"
 
 [params]
     title = "陈坤葳"
     # tagline 建议改成你的核心研究方向，而不是默认的 Lorem ipsum
-    tagline = "专注于深度学习、VSLAM 与大模型微调 (SAM3)"
+    tagline = "专注于深度学习可解释理论"
     author = "陈坤葳 (Kunwei Chen)"
     
     # 确保你的图片放在 static/img/profile.jpg
     authorImgPath = "/img/profile.jpg" 
     
     # Blurb 建议写得更具体，展示技术栈
-    authorBlurb = "AI 与机器人方向研究者。目前专注于 SAM3 微调、VSLAM 算法优化及 ROS 2 系统开发。热衷于探索计算机视觉与底层硬件的结合。"
+    authorBlurb = "AI可解释方向研究者。"
 
 [social]
     email = "mailto:WorkKunweiChen@outlook.com" # 加上 mailto: 点击可直接发邮件

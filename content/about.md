@@ -1,110 +1,60 @@
 ---
-author: "Pravin Paratey"
-title: "About Theme Prav"
-date: "2019-12-31"
-description: "A little more about this theme"
+author: "陈坤葳 (Kunwei Chen)"
+title: "关于我 (About Me)"
+date: "2026-04-07"
+description: "AI与机器人开发者的自我介绍及技术背景"
 tags: [
-    "theme",
-    "prav",
+    "About",
+    "Resume",
 ]
 ---
 
-## History
+## 👋 你好，我是陈坤葳 (Kunwei Chen)
 
-This theme began it's life in early 2013, as the theme for my blog "[Thoughts on Engineering and Management](https://cto.me.uk)". Back then it was generated using [nanoc](https://nanoc.ws/). In 2018, I moved to [hugo](https://gohugo.io/) because of it's ability to hot-reload the website while I was working. Nanoc forced me to rebuild the site which took roughly 10-20 seconds, which quickly became a deal breaker.
+我是一名专注于 **人工智能（AI）** 与 **机器人（Robotics）** 交叉领域的开发者与研究者。我的主要研究方向包括大视觉模型（如 SAM3）的微调、生成式扩散模型开发，以及基于 ROS 2 的视觉同时定位与建图（VSLAM）系统构建。
 
-## Principles
+我热衷于探索计算机视觉算法在底层硬件上的高效部署，致力于让机器人系统拥有更精准的感知与定位能力。
 
-I have always believed in using as little computing resources as possible. This theme uses the excellent [purecss](https://purecss.io/) css library, which is tiny while still being quite functional.
+---
 
-The colours used have been chosen to be easy on the eyes, with just enough contrast to help with accessibility.
+## 🔬 核心研究方向
 
-This theme is by no means complete. I have added to it over the last six years and will continue to do so. I hope you and the rest of the community will help in contributing to making this theme even better.
+### 1. 视觉大模型与微调 (AI & Vision)
+* **SAM3 微调与应用**：利用 LoRA 技术对 Segment Anything Model 3 进行参数高效微调（PEFT），针对特定领域（如动漫角色分割）优化模型边缘检测表现。
+* **扩散模型 (Diffusion Models)**：独立开发用于动漫角色生成的扩散模型，涵盖 256x256 数据集构建、训练脚本调试及 GPU 利用率底层优化。
 
-## Features
+### 2. 机器人视觉定位 (VSLAM)
+* **异构传感器融合**：利用 Orbbec RGB-D 相机与 6 轴 IMU（惯性测量单元）数据进行高精度视觉里程计开发。
+* **系统优化**：针对复杂环境下的特征点丢失问题，引入闭环检测（Loop Closure）机制，并致力于解决相机底层帧率不稳定等硬件级传输问题。
 
-This is a two column theme with a navbar at the top and a sidebar to the right. The navbar contains links to major pages and links to social networks. The sidebar contains an about section, a section with the last 10 posts and finally a section which lists tags used across your site.
+---
 
-### Beautiful tables and images through purecss.
+## 💻 技术栈 (Tech Stack)
 
-   Name | Age
---------|------
-    Bob | 27
-  Alice | 23
+得益于开源社区的强大力量，以下是我在日常开发与研究中构建的核心技能矩阵：
 
-### Syntax highlighting by pygments
+| 领域 | 核心技术 / 工具 |
+| :--- | :--- |
+| **编程语言** | Python 3.x, C++ 17 |
+| **深度学习框架** | PyTorch, LoRA, TensorRT |
+| **机器人底层系统** | ROS 2 Jazzy, Ubuntu 24.04 |
+| **计算机视觉** | OpenCV, SAM3, Diffusion Models |
+| **硬件与调试** | Meta Quest 3S, Orbbec Camera |
 
-Set your pygments theme by setting,
+---
 
-    pygmentsCodeFences = "true"
-    pygmentsStyle = "perldoc"
+## 🚀 近期动态
 
-Example highlighted code,
+目前，我正在使用 **Ubuntu 24.04** 和 **ROS 2 Jazzy** 环境，结合 **Meta Quest 3S** 头显，开发一套端到端的 VSLAM 演示与交互系统。同时，我也在持续迭代 SAM3 的训练脚本，解决复杂场景下的 AttributeError 等工程化挑战。
 
-{{< highlight html >}}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
+---
 
-### Feature images in archives
-Setting the image parameter in the yaml header sets a feature image which is displayed in the articles section.
+## 📫 联系我
 
-### Comments by disqus
+我非常期待与志同道合的开发者、研究人员进行技术交流。如果您对我的算法部署感兴趣，或者有合作机会，欢迎通过以下方式与我取得联系：
 
-To enable comments, set your `disqusShortname` in config.toml. This will make comments appear on all single article pages. This bit of code is located at `layouts\_default\single.html`.
+* **Email**: <WorkKunweiChen@outlook.com>
+* **GitHub**: [CSNOi](https://github.com/CSNOi)
+* **QQ**: 1226120778
 
-### Social
-
-To enable a link to a social network in the header (top-right), enter the url. To disable it, just comment it out. This bit of code is located at `layouts\partials\menu.html`.
-
-## Configuration
-
-This is an example of the configuration file.
-
-{{< highlight toml >}}
-baseURL = "https://cto.me.uk/"
-languageCode = "en-gb"
-title = "Hugo Theme - Prav"
-theme = "prav"
-
-pygmentsCodeFences = "true"
-pygmentsStyle = "perldoc"
-
-#googleanalytics = ""
-#disqusShortname = ""
-
-# Below settings are used throughout the theme. Please update
-[params]
-  title = "Hugo Theme - Prav"
-  tagline = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  author = "Pravin Paratey"
-
-[social]
-  email = "mailto:pravin@paratey.com"
-  facebook = "https://www.facebook.com/pravin.paratey"
-  twitter = "http://twitter.com/pravin"
-  medium = "https://www.medium.com/@pravin"
-  github = "https://github.com/pravin"
-  linkedin = "http://uk.linkedin.com/in/pravinp"
-
-
-# Set unsafe mode to allow markdownify to work with goldmark
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-{{< /highlight >}}
-
-## In closing
-
-I hope you enjoy this theme as much as I have enjoyed building and using it over the last few years.
-
--Prav
+> 保持开源精神，在算法与硬件的边界上持续探索。
