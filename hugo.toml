@@ -12,14 +12,14 @@ theme = "hugo-profile"
   # 1. 中文版配置 (zh-cn)
   # ----------------------------------------
   [languages.zh-cn]
-    title = "陈坤葳"
+    title = "陈坤葳个人主页"
     languageName = "中/CN" # 语言切换器上显示的文字
     weight = 1
 
     [languages.zh-cn.params]
       title = "陈坤葳"
-      description = "AI算法工程师，专注于机器视觉、多传感器融合与AI可解释性理论"
-      image = "img/profile.jpg"
+      description = "AI算法工程师，专注于机器视觉、多模态融合与AI可解释性理论"
+      image = "/img/profile.jpg"
       
       [languages.zh-cn.params.navbar]
         align = "right"
@@ -31,27 +31,38 @@ theme = "hugo-profile"
         title = "你好，我是 陈坤葳"
         subtitle = "深耕 AI 可解释性理论与高精度 VSLAM 定位"
         content = "北京化工大学人工智能背景，法学双学位复合背景。目前在灵心巧手(北京)科技有限公司担任算法工程师，致力于让黑盒模型变得透明，让机器人感知更加精准。"
-        image = "img/profile.jpg" 
+        image = "/img/profile.jpg" 
         
       # (这里可以继续保留中文版的 about, skills, experience 等，前面加上 languages.zh-cn.params 前缀)
       
       [languages.zh-cn.params.skills]
         enable = true
         title = "技术栈"
-        # ... 中文技能列表 ...
+        [[languages.zh-cn.params.skills.list]]
+            icon = "cpu"
+            title = "底层开发"
+            info = "CUDA C, 汇编优化, STM32"
+        [[languages.zh-cn.params.skills.list]]
+            icon = "eye"
+            title = "机器视觉"
+            info = "VSLAM, OpenCV, SAM3"
+        [[languages.zh-cn.params.skills.list]]
+            icon = "code"
+            title = "AI 框架"
+            info = "PyTorch, XAI, TransformerLens"
 
   # ----------------------------------------
   # 2. 英文版配置 (en)
   # ----------------------------------------
   [languages.en]
-    title = "Kunwei Chen | AI & Robotics"
+    title = "Kunwei Chen homepage"
     languageName = "En/US" # 语言切换器上显示的文字
     weight = 2
 
     [languages.en.params]
       title = "Kunwei Chen"
       description = "AI Algorithm Engineer focusing on Computer Vision, Sensor Fusion, and XAI."
-      image = "img/profile.jpg"
+      image = "/img/profile.jpg"
       
       [languages.en.params.navbar]
         align = "right"
