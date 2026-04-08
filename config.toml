@@ -17,19 +17,16 @@ pygmentsStyle = "perldoc"
 [params]
     title = "Hugo Theme - Prav"
     tagline = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    author = "Pravin Paratey"
-    authorImgPath = "/img/author.png"
+    author = "陈坤葳(Kunwei Chen)"
+    authorImgPath = "/img/profile.jpg"
     authorBlurb = "Something about me"
 
 # If you do not want a social icon, just comment it out
 # Please update the example values!
 [social]
-    email = "mailto:example@example.com"
-    facebook = "https://www.facebook.com/example"
-    twitter = "http://twitter.com/example"
-    medium = "https://www.medium.com/@example"
-    github = "https://github.com/example"
-    linkedin = "http://uk.linkedin.com/in/example"
+    email = "WorkKunweiChen@outlook.com"
+    github = "https://github.com/CSNOi"
+    QQ = "1226120778"
 
 
 # Set unsafe mode to allow markdownify to work with goldmark
