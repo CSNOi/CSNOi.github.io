@@ -10,7 +10,7 @@ enableRobotsTXT = true
 # 全站通用参数配置 (彻底解决对齐与搜索框)
 # ==========================================
 [params]
-  title = "陈坤葳 | AI & Robotics"
+  title = "陈坤葳个人主页"
   description = "AI算法工程师，专注于机器视觉、多传感器融合与AI可解释性理论"
   favicon = "/fav.png"
   disableSearch = true      # 全局禁用搜索
@@ -33,7 +33,7 @@ enableRobotsTXT = true
   # 1. 中文版配置 (zh-cn)
   # ----------------------------------------
   [languages.zh-cn]
-    title = "陈坤葳 | AI & Robotics"
+    title = "陈坤葳主页"
     languageName = "中/CN"
     weight = 1
     # 🟢 适配目录结构：导航菜单指向 /blogs 文件夹
@@ -159,7 +159,7 @@ enableRobotsTXT = true
   # 2. 英文版配置 (en)
   # ----------------------------------------
   [languages.en]
-    title = "Kunwei Chen | AI & Robotics"
+    title = "Kunwei Chen private homepage"
     languageName = "En/US"
     weight = 2
     # 🟢 适配目录结构：导航菜单指向英文路径（如果有内容隔离的话）
@@ -173,7 +173,7 @@ enableRobotsTXT = true
       weight = 2
 
     [languages.en.params]
-      title = "Kunwei Chen"
+      title = "Kunwei Chen homepage"
       image = "/img/profile.jpg"
       
       [languages.en.params.navbar]
