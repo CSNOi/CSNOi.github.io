@@ -83,42 +83,41 @@ UMAP 假设数据均匀分布在流形上，并计算模糊单纯复形（Fuzzy 
    $$\mathcal{L}_{CE} = \sum_{i \neq j} \left[ p_{ij} \log \left(\frac{p_{ij}}{q_{ij}}\right) + (1 - p_{ij}) \log \left(\frac{1 - p_{ij}}{1 - q_{ij}}\right) \right]$$
 
 ## **4\. 可视化对比代码 (Python)**
-```
 
+```python
 import numpy as np  
 import matplotlib.pyplot as plt  
 from sklearn import datasets  
 from sklearn.decomposition import PCA  
 from sklearn.manifold import TSNE  
-import umap  \# pip install umap-learn
+import umap  # pip install umap-learn
 
-\# 1\. 加载数据 (MNIST 手写数字采样)  
-digits \= datasets.load\_digits()  
-X, y \= digits.data, digits.target
+# 1\. 加载数据 (MNIST 手写数字采样)  
+digits = datasets.load_digits()  
+X, y = digits.data, digits.target
 
-\# 2\. 执行降维  
-\# PCA  
-pca\_res \= PCA(n\_components=2).fit\_transform(X)
+# 2. 执行降维  
+# PCA  
+pca_res = PCA(n_components=2).fit_transform(X)
 
-\# t-SNE  
-tsne\_res \= TSNE(n\_components=2, random\_state=42).fit\_transform(X)
+# t-SNE  
+tsne_res = TSNE(n_components=2, random_state=42).fit_transform(X)
 
-\# UMAP  
-umap\_res \= umap.UMAP(n\_neighbors=15, min\_dist=0.1, random\_state=42).fit\_transform(X)
+# UMAP  
+umap_res = umap.UMAP(n_neighbors=15, min_dist=0.1, random_state=42).fit_transform(X)
 
-\# 3\. 绘图对比  
-fig, axes \= plt.subplots(1, 3, figsize=(18, 5))  
-titles \= \['PCA', 't-SNE', 'UMAP'\]  
-results \= \[pca\_res, tsne\_res, umap\_res\]
+# 3. 绘图对比  
+fig, axes = plt.subplots(1, 3, figsize=(18, 5))  
+titles = ['PCA', 't-SNE', 'UMAP']  
+results = [pca_res, tsne_res, umap_res]
 
 for i, ax in enumerate(axes):  
-    scatter \= ax.scatter(results\[i\]\[:, 0\], results\[i\]\[:, 1\], c=y, cmap='Spectral', s=5)  
-    ax.set\_title(titles\[i\])  
+    scatter = ax.scatter(results[i][:, 0], results[i][:, 1], c=y, cmap='Spectral', s=5)  
+    ax.set_title(titles[i])  
     plt.colorbar(scatter, ax=ax)
 
-plt.tight\_layout()  
+plt.tight_layout()  
 plt.show()
-
 ```
 
 ## **5\. 总结对比**
