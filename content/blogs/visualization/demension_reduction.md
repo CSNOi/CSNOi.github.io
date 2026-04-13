@@ -3,8 +3,8 @@ title: "高维数据可视化方法：PCA、t-SNE 与 UMAP"
 date: 2026-04-01T10:00:00+08:00 
 description: "深度解析主流降维算法 PCA、t-SNE 与 UMAP 的数学原理及可视化对比。" 
 image: "/img/blogs/visualization/interpretability.jpg" 
-tags: ["AI", "XAI", "Research", "可视化"] 
-categories: ["Deep Learning", "技术笔记"] 
+tags: ["AI", "XAI", "Research", "可视化"]
+categories: ["Deep Learning", "技术笔记"]
 draft: false 
 mathjax: true
 ---
