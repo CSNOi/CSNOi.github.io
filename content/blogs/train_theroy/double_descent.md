@@ -1,7 +1,7 @@
 ---
 title: "神经网络训练动力学" 
 date: 2026-04-13T10:00:00+08:00 
-description: "度量空间知识" 
+description: "二次下降现象" 
 image: "/img/blogs/visualization/interpretability.jpg" 
 tags: ["AI", "XAI", "TRAIN_THEROY"]
 categories: ["训练理论", "工程结论"]
@@ -33,11 +33,11 @@ mathjax: true
 * 插值阈值 (Interpolation Threshold)
 * 超参数化区间 (Over-parameterized)
 
-![本地图片](/img/blogs/train_theroy/double_descent/double_descent_s2e.png)
+![不同宽度双下降测试](/img/blogs/train_theroy/double_descent/double_descent_s2e.png)
 双下降本地测试结果
 
 
-![本地图片](/img/blogs/train_theroy/double_descent/double_descent.png)
+![不同网络规模双下降测试](/img/blogs/train_theroy/double_descent/double_descent.png)
 双下降本地测试结果
 
 1. 经典区间
